@@ -18,6 +18,12 @@ public class CategoryRepository {
         map.put(obj.getId(), obj);
     }
 
+    public void save(Category... obj){
+        for(Category cat: obj){
+            map.put(cat.getId(), cat);
+        }
+    }
+
     public Category findById(Long id) {
         return map.get(id);
     }

@@ -1,14 +1,13 @@
 package com.example.backendtest.repository;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.springframework.stereotype.Component;
-
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import com.example.backendtest.entities.Product;
 
+@Repository
+public interface ProductRepository extends JpaRepository<Product, Long>{}
+
+/*
 @Component
 public class ProductRepository {
 
@@ -31,5 +30,5 @@ public class ProductRepository {
     public List<Product> findAll() {
         return new ArrayList<Product>(map.values());
     }
-
 }
+*/
